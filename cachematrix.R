@@ -1,16 +1,14 @@
-## Put comments here that give an overall description of what your
-## functions do
 
 ## This function creates a special "matrix" object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
 inv <- NULL
         set <- function(y) {
-                x <<- y
+                x <<- y                                   ## y holds value of matrix to be set.
                 inv <<- NULL
         }
         get <- function() x
-        setinv <- function(inverse) inv <<- inverse
+        setinv <- function(inverse) inv <<- inverse    ## inverse stores inv of matrix (precalulated)
         getinv <- function() inv
         list(set = set, get = get,
              setinv = setinv,
